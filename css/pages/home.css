@@ -1,0 +1,34 @@
+/*
+ * Home Page
+ */
+
+.immigration-intro {
+	min-height: 650px;
+}
+
+@media( min-width: 640px )  {
+	.immigration-intro {
+		min-height: 850px;
+	}
+}
+
+@media( min-width: 1040px ) {
+	.immigration-intro {
+		min-height: 650px;
+	}
+
+	.immigration-intro .intro {
+		transform-origin: top left;
+		transform: scale(1.25);
+	}
+}
+@media( min-width: 1480px ) {
+	.immigration-intro {
+		min-height: 850px;
+	}
+
+	.immigration-intro .intro {
+		transform-origin: top left;
+		transform: scale(1.5);
+	}
+}
