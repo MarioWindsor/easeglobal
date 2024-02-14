@@ -2,9 +2,31 @@
  * Home Page
  */
 
+/* -- Immigration Intro -- */
 .immigration-intro {
+	position: relative;
 	min-height: 650px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
+/*.immigration-intro .tile-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: calc((var(--space-100) * 4.5) - (var(--space-25)/1.2));
+	grid-gap: var(--space-25);
+	counter-reset: order;
+}*/
+/*.immigration-intro .tile-grid .tile {
+	position: relative;
+	overflow: hidden;
+	padding: var(--space-50);
+	border-radius: var(--space-min);
+	overflow: hidden;
+}*/
+/*.immigration-intro .tile-grid .tile:nth-child( 1 ) { grid-column-start: 5; grid-column-end: span 2; grid-row-start: 2; grid-row-end: span 2; }*/
+/*.immigration-intro .tile-grid .tile:nth-child( 2 ) { grid-column-start: 7; grid-column-end: span 2; grid-row-start: 4; grid-row-end: span 2; }*/
+/*.immigration-intro .tile-grid .tile:nth-child( 3 ) { grid-column-start: 7; grid-column-end: span 2; grid-row-start: 1; grid-row-end: span 3; }*/
 
 @media( min-width: 640px )  {
 	.immigration-intro {
@@ -28,6 +50,150 @@
 	}
 
 	.immigration-intro .intro {
+		transform-origin: top left;
+		transform: scale(1.5);
+	}
+}
+
+
+
+/* -- Immigration Feature -- */
+
+.immigration-feature .calculator {
+	border-radius: var(--space-25);
+	box-shadow: 0 0 1px 1px rgba(0, 102, 255, 0.125), 0 0 var(--space-200) 0px rgba(0, 102, 255, 0.2);
+}
+
+.immigration-feature .calculator .country-selector {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+	
+.immigration-feature .calculator .country-selector label {
+	width: calc(var(--space-100)*2.2);
+	height: calc(var(--space-100)*1.4652);
+	margin: var(--space-25);
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: var(--space-min);
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 0 3px 1px rgba(0, 102, 255, 0.25);
+	transition: .3s ease-out;
+}
+
+.immigration-feature .calculator .country-selector input:checked + label {
+	box-shadow: 0 0 0px var(--space-min) rgba(0, 102, 255, 0.75), 0 0 var(--space-25) var(--space-min) rgba(0, 102, 255, 0.75);
+}
+.immigration-feature .calculator .country-selector input:not(:checked) + label {
+	opacity: 0.65;
+}
+
+.immigration-feature .calculator .country-selector .details {
+	display: none;
+	width: 100%;
+	-webkit-order: 1;
+	order: 1;
+	padding: var(--space-25);
+	margin-top: var(--space-25);
+}
+
+.immigration-feature .calculator .country-selector .details li {
+	margin: 0;
+	list-style-type: none;
+	padding-left: var(--space-75);
+	position: relative;
+}
+.immigration-feature .calculator .country-selector .details li:before {
+	content: '\2022';
+	position: absolute;
+	color: var(--blue);
+	transform: scale(1.75) translateX(calc(-1.25 * var(--space-25)));
+}
+
+.immigration-feature .calculator .country-selector input:checked + label + .details {
+	display: block;
+}
+
+@media( min-width: 640px )  {
+	.immigration-feature .calculator .country-selector {
+		position: relative;
+	}
+	.immigration-feature .calculator .country-selector:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		bottom: 0;
+		margin-left: calc(-1 * var(--space-50));
+		margin-bottom: calc(-1 * var(--space-50));
+		width: calc(var(--space-100)*9);
+		height: calc(var(--space-100)*16);
+		background: url('/media/character-cutout-1.png');
+		background-size: contain;
+		background-position: right bottom;
+		background-repeat: no-repeat;
+		transform: translateX(-82%);
+	}
+}
+
+@media( min-width: 1040px ) {
+	.immigration-feature .description .p {
+		width: 75%;
+	}
+	
+	.immigration-feature .calculator .country-selector label {
+		width: calc(var(--space-100)*1.82);
+		height: calc(var(--space-100)*1.21212);
+	}
+}
+@media( min-width: 1480px ) {
+	.immigration-feature .calculator .country-selector label {
+		width: calc(var(--space-100)*2.2);
+		height: calc(var(--space-100)*1.4652);
+	}
+}
+
+
+
+
+/* -- Business Intro -- */
+.business-intro {
+	position: relative;
+	min-height: 650px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+@media( min-width: 640px )  {
+	.business-intro {
+		min-height: 850px;
+	}
+}
+
+@media( min-width: 1040px ) {
+	.business-intro {
+		min-height: 650px;
+	}
+
+	.business-intro .intro {
+		transform-origin: top left;
+		transform: scale(1.25);
+	}
+}
+@media( min-width: 1480px ) {
+	.business-intro {
+		min-height: 850px;
+	}
+
+	.business-intro .intro {
 		transform-origin: top left;
 		transform: scale(1.5);
 	}

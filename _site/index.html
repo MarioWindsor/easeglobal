@@ -129,26 +129,48 @@
 
 
 		<!-- Immigration Intro -->
-		<div id="immigration-intro" class="immigration-intro" style="background-image: url('media/immigration-intro-background.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+		<div id="immigration-intro" class="immigration-intro" style="background-image: url('media/immigration-intro-background.jpg');">
 			<div class="container">
 				<div class="row">
-					<div class="columns small-12 medium-5 hidden">
-						<div class="inline-block no-overflow" style="width: 100%; padding-top: 100%; font: 0; line-height: 0; border-radius: 10px; background: url('https://img.freepik.com/premium-photo/young-bearded-indian-businessman-against-view-city_251136-22978.jpg?w=1380'); background-position: left center; background-size: cover; background-repeat: no-repeat; box-shadow: 0px 0px 0px 2px var(--blue), 0px 0px 10px 0px rgba(0, 0, 255, 0.5);"></div>
-					</div>
 					<div class="intro columns small-12 medium-6 space-200-top">
 						<div class="h1 strong">Get Settled</div>
-						<div class="h2 strong">in <span class="text text-blue"></span></div>
+						<div class="h2 strong">in <span class="js-immigration-text text-blue"></span></div>
 						<div class="h2 strong space-25-bottom">within 30days</div>
 						<a class="button fill-blue" href="#">View Price</a>
 						<div class="small text-blue space-50-top">* Terms & Conditions Apply</div>
 					</div>
+					<!-- <div class="columns small-12">
+						<div class="tile-grid">
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+							<div class="tile fill-blue space-25">
+								<div class="h4">Lorem ipsum dolor sit amet consectetur.</div>
+							</div>
+						</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 		<!-- End: Immigration Intro -->
 		<script>
-			var typing=new Typed(".text", {
-				strings: ["", "United States (USA)", "United Kingdom (UK)", "Singapore (SG)", "Isle of Mann (IM)", "Portugal (PT)", "Spain (ES)"],
+			var typing=new Typed(".js-immigration-text", {
+				strings: ["", "United States (USA)", "United Kingdom (UK)", "Singapore (SG)", "Isle of Man (IM)", "Portugal (PT)", "Spain (ES)"],
 				typeSpeed: 100,
 				backSpeed: 40,
 				loop: true,
@@ -157,11 +179,161 @@
 
 
 		<!-- Immigration Feature -->
-		<div id="immigration-feature" class="immigration-feature">
+		<div id="immigration-feature" class="immigration-feature space-200-top-bottom">
 			<div class="container">
 				<div class="row">
-					<div class="columns small-12">
-						<!-- content -->
+					<div class="description columns small-9 small-offset-1 medium-5 medium-offset-0 large-6 xlarge-5">
+						<div class="h1 strong"><span class="text-blue">Immigrate</span> to the country of your choice</div>
+						<div class="h3 strong text-blue space-min-top" style="line-height: 1.35;">for less than the cost of an <span class="text-underline">international holiday!</span></div>
+						<div class="p space-75-top-bottom text-neutral-4">Unlock your dreams of global living affordably. Discover visa options to your dream destination at a fraction of international travel costs. Streamline your immigration process with unbeatable affordability & efficiency.</div>
+					</div>
+					<div class="calculator columns small-12 medium-offset-1 medium-6 large-5 xlarge-6 space-50">
+						<div class="p space-25 text-uppercase">Select A Country</div>
+						<div class="country-selector">
+							<!-- US Details -->
+								<input class="hidden" name="imcalc" id="imcalc_us" type="radio" checked="checked">
+								<label class="inline" for="imcalc_us" style="background-image: url('media/flag-us.png');">US</label>
+								<div class="details">
+									<div class="h2 strong text-blue">United States</div>
+									<div class="h5 text-neutral-4">Price: <span class="strong text-blue">₹7,90,000/-</span></div>
+									<div class="h5 strong space-75-top">Living in the USA:</div>
+									<div class="p">Immerse in the USA's innovation and diversity. Find a place for yourself within USA’s iconic cities and vast landscapes.</div>
+									<div class="h3 strong space-75-top">USA Immigration Opportunities (<span class="text-blue">Green Card</span>)</div>
+									<div class="h5 strong space-50-top">Investment Visas</div>
+									<ul class="space-50-top">
+										<li class="p">National Interest Waiver (NIW) green card</li>
+										<li class="p">E-2 Visa</li>
+										<li class="p">EB-5 Investment Visa</li>
+									</ul>
+									<div class="h5 strong space-50-top">Employment Based Visas</div>
+									<ul class="space-50-top">
+										<li class="p">EB-1 Employment-Based Green Card</li>
+										<li class="p">EB-2 Employment-Based Green Card</li>
+										<li class="p">EB-2 Employment-Based Green Card (NIW)</li>
+										<li class="p">EB-3 Employment-Based Green Card</li>
+									</ul>
+									<div class="h5 strong space-50-top">Humanitarian Visas</div>
+									<ul class="space-50-top">
+										<li class="p">Asylum</li>
+										<li class="p">Victims of Specified Mental Or Physical Abuse</li>
+										<li class="p">T Visas</li>
+									</ul>
+									<div class="p space-50-top space-150-bottom">Unlock the gateway to opportunity. Find the quickest and most affordable path to your immigration.</div>
+									<a href="#" class="button block fill-blue">Register Now</a>
+								</div>
+							<!-- END: US Details -->
+							<!-- UK Details -->
+								<input class="hidden" name="imcalc" id="imcalc_uk" type="radio">
+								<label class="inline" for="imcalc_uk" style="background-image: url('media/flag-uk.png');">UK</label>
+								<div class="details">
+									<div class="h2 strong text-blue">United Kingdom</div>
+									<div class="h5 text-neutral-4">Price: <span class="strong text-blue">₹7,90,000/-</span></div>
+									<div class="h5 strong space-75-top">Living in the UK:</div>
+									<div class="p">Embrace the UK's history and cultural tapestry. Kickstart your life within dynamic cities and stunning countryside.</div>
+									<div class="h3 strong space-75-top">UK Immigration Opportunities</div>
+									<div class="h5 strong space-50-top">UK Self Sponsorship Visa</div>
+									<ul class="space-50-top">
+										<li class="p">Apply for settlement (ILR) after 5 years.</li>
+										<li class="p">Endorsement by an approved endorsing body in the UK is a must.</li>
+										<li class="p">No minimum investment requirement.</li>
+										<li class="p">Allowed to be a majority shareholder in your business.</li>
+										<li class="p">Get your partner and children to the UK.</li>
+									</ul>
+									<div class="h5 strong space-50-top">Intra-Company Transfer Visa (ICT)</div>
+									<ul class="space-50-top">
+										<li class="p">Need to be 18 or over.</li>
+										<li class="p">Current employee of an approved organisation.</li>
+										<li class="p">Minimum 12 months of employment at current organisation outside UK or earn £73,900 or more in the UK.</li>
+										<li class="p">Possess a valid Certificate of Sponsorship.</li>
+										<li class="p">Earn £41,500 or the ‘going rate’ for your job, whichever is higher.</li>
+										<li class="p">Immigration Skills Charge paid.</li>
+										<li class="p">Enough income to support yourself without relying on public funds.</li>
+										<li class="p">Hold a valid TB certificate, if required.</li>
+									</ul>
+									<div class="p space-50-top">Our thorough evaluation and documentation process is designed with successful UK immigration in mind. We carefully consider your eligibility and adherence to immigration processes ensuring a swift and efficient migration for you and your loved ones.</div>
+									<div class="p space-50-top space-150-bottom">Discover your British adventure. Find the quickest and most affordable path to your immigration.</div>
+									<a href="#" class="button block fill-blue">Register Now</a>
+								</div>
+							<!-- END: UK Details -->
+							<!-- SG Details -->
+								<input class="hidden" name="imcalc" id="imcalc_sg" type="radio">
+								<label class="inline" for="imcalc_sg" style="background-image: url('media/flag-sg.png');">SG</label>
+								<div class="details">
+									<div class="h2 strong text-blue">Singapore</div>
+									<div class="h5 text-neutral-4">Price: <span class="strong text-blue">₹7,90,000/-</span></div>
+									<div class="h5 strong space-75-top">Living in Singapore:</div>
+									<div class="p">Experience Singapore's global hub status and cultural fusion. Anchor abode Singapore’s culinary delights and lush greenery.</div>
+									<div class="h3 strong space-75-top">Singapore Immigration Opportunities</div>
+									<ul class="space-50-top">
+										<li class="p">Employment Pass</li>
+										<li class="p">EntrePass</li>
+										<li class="p">Personalised Employment Pass (PEP)</li>
+										<li class="p">S Pass</li>
+										<li class="p">Dependent Pass</li>
+										<li class="p">Letter of Consent</li>
+										<li class="p">Tech Pass</li>
+										<li class="p">Overseas Network and Enterprise Pass (One Pass)</li>
+										<li class="p">Singapore PR</li>
+									</ul>
+									<div class="p space-50-top space-150-bottom">Embark on your Singaporean journey. Find the quickest and most affordable path to your immigration.</div>
+
+									<a href="#" class="button block fill-blue">Register Now</a>
+								</div>
+							<!-- END: SG Details -->
+							<!-- IM Details -->
+								<input class="hidden" name="imcalc" id="imcalc_im" type="radio">
+								<label class="inline" for="imcalc_im" style="background-image: url('media/flag-im.png');">IM</label>
+								<div class="details">
+									<div class="h2 strong text-blue">Isle of Man</div>
+									<div class="h5 text-neutral-4">Price: <span class="strong text-blue">₹7,90,000/-</span></div>
+									<div class="h5 strong space-75-top">Living in Isle of Man</div>
+									<div class="p">Delight in Isle of Man's scenic beauty and relaxed lifestyle. Establish a haven among Isle of Man’s historic sites and coastal vistas.</div>
+									<div class="h3 strong space-75-top">Isle of Man Immigration Opportunities</div>
+									<ul class="space-50-top">
+										<li class="p">Business Migrant (Start-Up) Visa</li>
+										<li class="p">Innovator Visa</li>
+										<li class="p">Worker Migrant Visa</li>
+									<div class="p space-50-top space-150-bottom">Discover serenity in the Isle of Man with the most affordable and quickest immigration solution.</div>
+
+									<a href="#" class="button block fill-blue">Register Now</a>
+								</div>
+							<!-- END: IM Details -->
+							<!-- PT Details -->
+								<input class="hidden" name="imcalc" id="imcalc_pt" type="radio">
+								<label class="inline" for="imcalc_pt" style="background-image: url('media/flag-pt.png');">PT</label>
+								<div class="details">
+									<div class="h2 strong text-blue">Portugal</div>
+									<div class="h5 text-neutral-4">Price: <span class="strong text-blue">₹7,90,000/-</span></div>
+									<div class="h5 strong space-75-top">Living in Portugal</div>
+									<div class="p">Find a place for yourself among Portugal's sunny beaches and charming villages. Be one with a nation rich in history and culture.</div>
+									<div class="h3 strong space-75-top">Portugal Immigration Opportunities</div>
+									<ul class="space-50-top">
+										<li class="p">Portuguese Residence Permit</li>
+										<li class="p">D2 Visa</li>
+									</ul>
+									<div class="p space-50-top space-150-bottom">Embrace the warmth of Portugal effortlessly with the fastest and most affordable immigration solution.</div>
+									<a href="#" class="button block fill-blue">Register Now</a>
+								</div>
+							<!-- END: PT Details -->
+							<!-- ES Details -->
+								<input class="hidden" name="imcalc" id="imcalc_es" type="radio">
+								<label class="inline" for="imcalc_es" style="background-image: url('media/flag-es.png');">ES</label>
+								<div class="details">
+									<div class="h2 strong text-blue">Spain</div>
+									<div class="h5 text-neutral-4">Price: <span class="strong text-blue">₹7,90,000/-</span></div>
+									<div class="h5 strong space-75-top">Living in Spain</div>
+									<div class="p">Indulge in Spain's vibrant culture and lively atmosphere. Get settled in the heart of historic landmarks and a cultural melting pot.</div>
+									<div class="h3 strong space-75-top">Spain Immigration Opportunities</div>
+									<ul class="space-50-top">
+										<li class="p">Self-employed Business Owner</li>
+										<li class="p">Non-lucrative (Passive/Retire Income)</li>
+										<li class="p">Digital Nomad (Remote Worker)</li>
+									</ul>
+									<div class="p space-50-top space-150-bottom">Dive into the spirit of Spain seamlessly with the quickest and most cost-effective path to immigration.</div>
+									<a href="#" class="button block fill-blue">Register Now</a>
+								</div>
+							<!-- END: ES Details -->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -196,16 +368,30 @@
 
 
 		<!-- Business Intro -->
-		<div id="business-intro" class="business-intro">
+		<div id="business-intro" class="business-intro" style="background-image: url('media/immigration-intro-background.jpg');">
 			<div class="container">
 				<div class="row">
 					<div class="columns small-12">
-						<!-- content -->
+						<div class="intro columns small-12 medium-6 space-200-top">
+							<div class="h1 strong">Business Incorporation</div>
+							<div class="h2 strong">in <span class="js-business-text text-blue"></span></div>
+							<div class="h2 strong space-25-bottom">within 45days</div>
+							<a class="button fill-blue" href="#">View Price</a>
+							<div class="small text-blue space-50-top">* Terms & Conditions Apply</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- End: Business Intro -->
+		<script>
+			var typing=new Typed(".js-business-text", {
+				strings: ["", "India(IN)", "United States(USA)", "United Kingdom(UK)", "Singapore(SG)", "Portugal(PT)", "Spain(ES)", "Arab Emirates(UAE)", "Thailand(TH)", "Saudi Arabia(SA)", "Qatar(QA)", "Kuwait(KW)"],
+				typeSpeed: 100,
+				backSpeed: 40,
+				loop: true,
+			});
+		</script>
 
 
 		<!-- Business Feature -->
