@@ -215,6 +215,8 @@
 .business-feature .process .business-feature-card { box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.2), 0 0 var(--space-200) 0px rgba(255, 255, 255, 0.3); }
 
 .business-feature .table-head {
+	position: relative;
+	z-index: 2;
 	border-top-left-radius: var(--space-25);
 	border-top-right-radius: var(--space-25);
 }
@@ -299,3 +301,26 @@
 		transform: translateX(4%);
 	}
 }
+
+
+
+
+/* -- Business Lead -- */
+.business-lead {
+	min-height: 900px;
+	background-color: var(--blue);
+	background-image: url('/media/bg-business-lead.jpg');
+	background-size: cover;
+	background-blend-mode: hard-light;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+
+.business-lead .form-container {
+/*	background-color: rgba(2, 51, 118, 0.75);*/
+}
+
+
+
+
