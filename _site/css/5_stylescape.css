@@ -569,10 +569,10 @@ select { cursor: pointer; }
 
 
 
-/* -- Roundness -- */
-.roundness-min { border-radius: var(--space-min); }
-.roundness-25 { border-radius: var(--space-25); }
-.roundness-50 { border-radius: var(--space-50); }
+/* -- Radius -- */
+.radius-min { border-radius: var(--space-min); }
+.radius-25 { border-radius: var(--space-25); }
+.radius-50 { border-radius: var(--space-50); }
 
 
 
