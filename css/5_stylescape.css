@@ -39,6 +39,8 @@
 	--dark: #231F20;
 	--black: #000000;
 	--blue: #0066FF;
+	--blue-light: #5DA7FF;
+	--blue-dark: #023376;
 	--red: #FF3366;
 /*	--yellow: #FFCC00;*/
 	--yellow: #FFEB3B;
@@ -274,6 +276,12 @@ hr {
 .fill-blue {
 	color: var(--light);
 	background-color: var(--blue); }
+.fill-blue-light {
+	color: var(--dark);
+	background-color: var(--blue-light); }
+.fill-blue-dark {
+	color: var(--light);
+	background-color: var(--blue-dark); }
 .fill-red {
 	color: var(--light);
 	background-color: var(--red); }
@@ -299,6 +307,8 @@ hr {
 .text-dark { color: var(--dark); }
 .text-black { color: var(--black); }
 .text-blue { color: var(--blue); }
+.text-blue-light { color: var(--blue-light); }
+.text-blue-dark { color: var(--blue-dark); }
 .text-red { color: var(--red); }
 .text-yellow { color: var(--yellow); }
 
@@ -577,11 +587,90 @@ select { cursor: pointer; }
 
 
 
-/* -- Roundness -- */
+/* -- Form Box -- */
 .form-box .form-label {
 	transform-origin: bottom left;
 	transform: translate(0,10px);
 }
+
+
+
+
+/*
+ * FAQs Component
+ */
+
+/* -- FAQs -- */
+.faqs .faq {
+	border-bottom: solid 1px var(--neutral-3);
+	overflow: hidden;
+}
+.faqs .faq:last-child {
+	border-bottom: 0;
+}
+/* FAQ Question */
+.faqs .faq .question {
+	cursor: pointer;
+}
+.faqs .faq .question .toggle {
+	padding-top: var(--space-25);
+	padding-right: var(--space-25);
+	text-align: right;
+}
+.faqs .faq .question .toggle .arrow {
+	display: inline-block;
+	width: var(--space-50);
+	height: var(--space-50);
+	position: relative;
+	transform: scale(0.5);
+}
+.faqs .faq .question .toggle .arrow .a1,
+.faqs .faq .question .toggle .arrow .a2 {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: calc(var(--space-25)/4);
+	background-color: var(--blue);
+	box-shadow: 0 0 0 1px var(--blue);
+	top: 50%;
+	transition: .3s ease-out;
+}
+.faqs .faq .question .toggle .arrow .a1 {
+	right: 50%;
+	transform-origin: right center;
+	transform: translateY(-50%) rotate(35deg);
+}
+.faqs .faq .question .toggle .arrow .a2 {
+	left: 50%;
+	transform-origin: left center;
+	transform: translateY(-50%) rotate(-35deg);
+}
+.faqs .faq > input:checked ~ .question .toggle .arrow .a1 {
+	transform: translateY(-50%) rotate(-35deg);
+}
+.faqs .faq > input:checked ~ .question .toggle .arrow .a2 {
+	transform: translateY(-50%) rotate(35deg);
+}
+/* FAQ Answer */
+.faqs .faq .answer {
+	max-height: 0px;
+	margin-bottom: 0;
+	opacity: 0;
+	transition: .5s ease-in-out;
+
+}
+.faqs .faq .answer a {
+	text-decoration: underline;
+}
+.faqs .faq > input:checked ~ .question + .answer {
+	max-height: 500px;
+	margin-bottom: var(--space-75);
+	opacity: 1;
+}
+.faqs .faq:last-child input .question + .answer {
+	margin-bottom: 0;
+}
+
 
 
 
