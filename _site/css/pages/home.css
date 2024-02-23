@@ -198,3 +198,104 @@
 		transform: scale(1.5);
 	}
 }
+
+
+
+
+
+
+/* -- Business Feature -- */
+.business-feature {}
+
+.business-feature .business-feature-card {
+	border-bottom-left-radius: var(--space-25);
+	border-bottom-right-radius: var(--space-25);
+}
+.business-feature .prereq .business-feature-card { box-shadow: 0 0 1px 1px rgba(255, 235, 59, 0.2), 0 0 var(--space-200) 0px rgba(255, 235, 59, 0.3); }
+.business-feature .process .business-feature-card { box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.2), 0 0 var(--space-200) 0px rgba(255, 255, 255, 0.3); }
+
+.business-feature .table-head {
+	border-top-left-radius: var(--space-25);
+	border-top-right-radius: var(--space-25);
+}
+
+.business-feature .point {
+	position: relative;
+	padding-left: var(--space-200);
+	border-bottom: 2px dashed var(--blue-light);
+}
+.business-feature .point:nth-child(2n) {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.business-feature .point:last-child {
+	border-bottom: none;
+}
+
+.business-feature .point .index {
+	opacity: 0.65;
+	position: absolute;
+	top: var(--space-50);
+	left: var(--space-50);
+}
+
+.business-feature .character {
+	position: relative;
+	padding-bottom: 365px;
+}
+.business-feature .character:before {
+	content: '';
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	height: 600px;
+	background: url('/media/character-cutout-2.png');
+	background-size: contain;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	transform: translateX(-30%);
+}
+
+.business-feature .character .point .p {
+	opacity: 0.85;
+}
+.business-feature .character .point .p:before {
+	content: '\2022';
+	position: absolute;
+	transform: scale(1.75) translateX(calc(-1.5 * var(--space-25)));
+}
+
+@media( min-width: 640px )  {
+	.business-feature .character {
+		padding-bottom: 340px;
+	}
+	.business-feature .character:before {
+		width: 400px;
+		height: 800px;
+		transform: translateX(-5%);
+	}
+}
+@media( min-width: 1040px ) {
+	.business-feature .character {
+		padding-bottom: var(--space-200);
+	}
+	.business-feature .character:before {
+		width: 500px;
+		height: 1000px;
+		transform: translateX(-5%);
+	}
+	.business-feature .character .process {
+		padding-left: var(--space-200);
+	}
+}
+@media( min-width: 1480px ) {
+	.business-feature .character {
+		padding-bottom: var(--space-250);
+	}
+	.business-feature .character:before {
+		width: 625px;
+		height: 1250px;
+		transform: translateX(4%);
+	}
+}
