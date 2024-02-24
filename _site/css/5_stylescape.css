@@ -46,45 +46,45 @@
 	--yellow: #FFEB3B;
 
 	--container-width: 300px;
-		--card: var(--container-width);
-		
-		--font-scale: 1.2;
-		--h1-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
-		--h2-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
-		--h3-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
-		--h4-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
-		--h5-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale));
-		--h6-scale: calc(var(--font-scale) * var(--font-scale));
-		--p-scale: calc(var(--font-scale));
-		--label-scale: calc(var(--font-scale) / var(--font-scale));
-		--small-scale: calc(var(--font-scale) / var(--font-scale) / var(--font-scale));
-		--font-offset: 0.035;
+	--card: var(--container-width);
+	
+	--font-scale: 1.2;
+	--h1-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--h2-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--h3-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--h4-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--h5-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--h6-scale: calc(var(--font-scale) * var(--font-scale));
+	--p-scale: calc(var(--font-scale));
+	--label-scale: calc(var(--font-scale) / var(--font-scale));
+	--small-scale: calc(var(--font-scale) / var(--font-scale) / var(--font-scale));
+	--font-offset: 0.035;
 
-		--h1: calc(var(--h1-scale) * var(--card) * var(--font-offset) );
-		--h2: calc(var(--h2-scale) * var(--card) * var(--font-offset) );
-		--h3: calc(var(--h3-scale) * var(--card) * var(--font-offset) );
-		--h4: calc(var(--h4-scale) * var(--card) * var(--font-offset) );
-		--h5: calc(var(--h5-scale) * var(--card) * var(--font-offset) );
-		--h6: calc(var(--h6-scale) * var(--card) * var(--font-offset) );
-		--p: calc(var(--p-scale) * var(--card) * var(--font-offset) );
-		--label: calc(var(--label-scale) * var(--card) * var(--font-offset) );
-		--small: calc(var(--small-scale) * var(--card) * var(--font-offset) );
-		
+	--h1: calc(var(--h1-scale) * var(--card) * var(--font-offset) );
+	--h2: calc(var(--h2-scale) * var(--card) * var(--font-offset) );
+	--h3: calc(var(--h3-scale) * var(--card) * var(--font-offset) );
+	--h4: calc(var(--h4-scale) * var(--card) * var(--font-offset) );
+	--h5: calc(var(--h5-scale) * var(--card) * var(--font-offset) );
+	--h6: calc(var(--h6-scale) * var(--card) * var(--font-offset) );
+	--p: calc(var(--p-scale) * var(--card) * var(--font-offset) );
+	--label: calc(var(--label-scale) * var(--card) * var(--font-offset) );
+	--small: calc(var(--small-scale) * var(--card) * var(--font-offset) );
+	
 
-		--space-100 : calc(var(--card)/12);
-		--space-min : calc( var(--space-100) * 0.15);
-		--space-50 : calc(var(--space-100)/2);
-		--space-25 : calc(var(--space-50)/2);
-		--space-75 : calc(var(--space-50)*1.5);
-		--space-125 : calc(var(--space-100)*1.25);
-		--space-150 : calc(var(--space-100)*1.5);
-		--space-175 : calc(var(--space-100)*1.75);
-		--space-200 : calc(var(--space-100)*2);
-		--space-225 : calc(var(--space-100)*2.25);
-		--space-250 : calc(var(--space-100)*2.5);
+	--space-100 : calc(var(--card)/12);
+	--space-min : calc( var(--space-100) * 0.15);
+	--space-50 : calc(var(--space-100)/2);
+	--space-25 : calc(var(--space-50)/2);
+	--space-75 : calc(var(--space-50)*1.5);
+	--space-125 : calc(var(--space-100)*1.25);
+	--space-150 : calc(var(--space-100)*1.5);
+	--space-175 : calc(var(--space-100)*1.75);
+	--space-200 : calc(var(--space-100)*2);
+	--space-225 : calc(var(--space-100)*2.25);
+	--space-250 : calc(var(--space-100)*2.5);
 	}
 
-	@media( min-width: 360px )  {
+	/*@media( min-width: 360px )  {
 		:root {
 			--container-width: 340px;
 		}
@@ -94,7 +94,7 @@
 		:root {
 			--container-width: 380px;
 		}
-	}
+	}*/
 
 	@media( min-width: 640px )  {
 		:root {
