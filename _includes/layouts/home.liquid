@@ -215,6 +215,7 @@
 							<div class="h6 space-75-bottom" style="width: 66.666%;">Complete the form below to explore immigration options and begin your journey.</div>
 						</div>
 						<div class="form-box fill-blue radius-25 space-50" style="box-shadow: 0 0 1px 1px rgba(0, 102, 255, 0.2), 0 0 var(--space-200) 0px rgba(0, 102, 255, 0.3);">
+							<form action="https://formspree.io/f/meqykeql" method="POST">
 							<div class="row">
 								<div class="columns small-12 space-25">
 									<div class="h4">Tell Us About Yourself:</div>
@@ -222,46 +223,47 @@
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Full Name <span class="text-yellow">*</span></span>
-										<input type="text" class="input-field block">
+										<input type="text" name="egim_fullname" required class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Email ID <span class="text-yellow">*</span></span>
-										<input type="text" class="input-field block">
+										<input type="text" name="egim_emailid" required class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Phone Number <span class="text-yellow">*</span></span>
-										<input type="text" class="input-field block">
+										<input type="text" name="egim_phonenumber" required class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Immigration Country</span>
-										<input type="text" class="input-field block">
+										<input type="text" name="egim_country" class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Purpose</span>
-										<input type="text" class="input-field block">
+										<input type="text" name="egim_purpose" class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Timeline</span>
-										<input type="text" class="input-field block">
+										<input type="text" name="egim_timeline" class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min invisible">Submit</span>
-										<button class="button fill-yellow block">Start your Journey</button>
+										<button class="button fill-yellow block" type="submit">Start your Journey</button>
 									</label>
 								</div>
 							</div>
+							</form>
 						</div>
 						<div class="whatsapp text-center space-75">
 							<div class="h5 space-25-bottom" >or <span class="strong" style="color: #19C520;">whatsapp</span> us on</div>
@@ -594,17 +596,111 @@
 		<!-- End: Business Lead -->
 
 
-		<!-- Consultancy Overview -->
-		<div id="consultancy-overview" class="consultancy-overview">
+		<!-- Consultation Intro -->
+		<div id="consultation-intro" class="consultation-intro fill-yellow" style="background-image: url('media/immigration-intro-background.jpg'); background-blend-mode: multiply;">
 			<div class="container">
 				<div class="row">
-					<div class="columns small-12">
-						<!-- content -->
+					<div class="intro columns small-12 medium-6 large-5 xlarge-4 space-200-top">
+						<div class="h1 strong">Transform <br>your business</div>
+						<div class="h3 strong">with <span class="js-consultation-text text-blue"></span></div>
+						<div class="h3 strong space-25-bottom">at Unbeatable Prices</div>
+						<a class="button fill-blue" href="#">View Price</a>
+						<div class="small text-blue space-50-top">* Terms & Conditions Apply</div>
+					</div>
+					<div class="consultation-services columns small-12 medium-6 large-7 xlarge-7 xlarge-offset-1  space-200-top-bottom">
+						<div class="row">
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/logo-design.jpeg');">Logo Design</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/brand-design.jpeg');">Brand Design</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/package-design.jpeg');">Package Design</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/website-design.jpeg');">Website Design</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/e-commerce-seo.jpeg');">E-commerce SEO</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/product-photography.jpeg');">Product Photography</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/brand-photography.jpeg');">Brand Photography</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/event-photography.jpeg');">Event Photography</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/corporate-film.jpeg');">Corporate Film</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/corporate-podcast.jpeg');">Corporate Podcast</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/social-media.jpeg');">Social Media</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/instagram-filters.jpeg');">Instagram Filters</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/merchandise-design.jpeg');">Merchandise Design</div>
+							</div>
+							<div class="columns small-12 large-6 space-25-top-bottom">
+								<div class="service-card h4 strong uppercase space-50 radius-25" style="background-image: url('/media/keyword-copywriting.jpeg');">Keyword Copywriting</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End: Consultancy Overview -->
+		<!-- End: Consultation Intro -->
+		<script>
+			var typing=new Typed(".js-consultation-text", {
+				strings: ["", "Logo Design", "Brand Design", "Package Design", "Website Design", "E-commerce SEO", "Product Photography", "Brand Photography", "Event Photography", "Corporate Film", "Corporate Podcast", "Social Media", "Instagram Filters",  "Merchandise Design", "Keyword Copywriting"],
+				typeSpeed: 100,
+				backSpeed: 40,
+				loop: true,
+			});
+		</script>
+
+
+
+		<!-- EG Footer -->
+		<section id="eg-footer" class="eg-footer fill-black space-200-top-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="description columns small-12 medium-6">
+						<div class="logo space-75-bottom"><img class="block" src="media/logo-color.png" style="width: 66.666%;"></div>
+						<div class="h6 space-100-bottom space-200-right">EaseGlobal - a pioneer in immigration, global incorporation and brand consulting company, where borders blur and businesses shine. We craft pathways to new horizons through immigration solutions, smooth incorporations, and strategic brand consultancy. Empowering journeys, igniting possibilities.</div>
+					</div>
+					<div class="quicklinks columns small-12 medium-3">
+						<div class="h4 strong space-50-top space-25-bottom">Quick Links</div>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Immigration</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Incorporation</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Consultations</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">About</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Contact Us</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Privacy Policy</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Terms & Conditions</a><br>
+					</div>
+					<div class="connections columns small-12 medium-3">
+						<div class="h4 strong space-50-top space-25-bottom">Get In Touch</div>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">hello@ease.global</a><br>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">+91-99860-99860</a><br>
+						<div class="h4 strong space-50-top space-25-bottom">Socials</div>
+						<a href="" class="link h6 inline text-blue-light space-25-bottom">Linked In</a><br>
+						<a href="https://www.instagram.com/ease__global/" class="link h6 inline text-blue-light space-25-bottom">Instagram</a><br>
+						<a href="#" class="link h6 inline text-blue-light space-25-bottom">Facebook</a><br>
+						<a href="https://twitter.com/EaseGlobal" class="link h6 inline text-blue-light space-25-bottom">Twitter - X</a><br>
+						<a href="https://www.youtube.com/@easeglobal" class="link h6 inline text-blue-light space-25-bottom">YouTube</a><br>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END: EG Footer -->
 
 
 
