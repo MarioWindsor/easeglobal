@@ -412,7 +412,8 @@
 						</div>
 						<div class="form-box fill-blue radius-25 space-50" style="box-shadow: 0 0 1px 1px rgba(0, 102, 255, 0.2), 0 0 var(--space-200) 0px rgba(0, 102, 255, 0.3);">
 							<!-- https://docs.google.com/forms/d/e/1FAIpQLScwVGA7s0ndpD6lX7rQNbFu0yQvPlEZrwwYYkqmebG2FJFR2g/viewform?usp=sf_link -->
-							<form action="https://formspree.io/f/xwkgbone" method="POST">
+							<!-- <form action="https://formspree.io/f/xwkgbone" method="POST"> -->
+							<form id="egImmigrationLeads" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScwVGA7s0ndpD6lX7rQNbFu0yQvPlEZrwwYYkqmebG2FJFR2g/formResponse" method="POST" enctype="multipart/form-data">
 							<div class="row">
 								<div class="columns small-12 space-25">
 									<div class="h4">Tell Us About Yourself:</div>
@@ -420,26 +421,30 @@
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Full Name <span class="text-yellow">*</span></span>
-										<input type="text" name="egim_fullname" required class="input-field block">
+										<!-- <input type="text" name="egim_fullname" required class="input-field block"> -->
+										<input type="text" name="entry.919331376" required class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Email ID <span class="text-yellow">*</span></span>
-										<input type="text" name="egim_emailid" required class="input-field block">
+										<!-- <input type="text" name="egim_emailid" required class="input-field block"> -->
+										<input type="text" name="entry.124880939" required class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Phone Number <span class="text-yellow">*</span></span>
-										<input type="text" name="egim_phonenumber" required class="input-field block">
+										<!-- <input type="text" name="egim_phonenumber" required class="input-field block"> -->
+										<input type="text" name="entry.775285260" required class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Immigration Country</span>
 										<!-- <input type="text" name="egim_country" class="input-field block"> -->
-										<select name="egim_country" class="input-field block">
+										<!-- <select name="egim_country" class="input-field block"> -->
+										<select name="entry.696551209" class="input-field block">
 											<option value="blank" disabled="disabled" selected="selected">Select</option>
 											<option value="United States (USA)">United States (USA)</option>
 											<option value="United Kingdom (UK)">United Kingdom (UK)</option>
@@ -453,19 +458,21 @@
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Purpose</span>
-										<input type="text" name="egim_purpose" class="input-field block">
+										<!-- <input type="text" name="egim_purpose" class="input-field block"> -->
+										<input type="text" name="entry.677688100" class="input-field block">
 									</label>
 								</div>
 								<div class="columns small-12 large-6 space-25">
 									<label class="block">
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Timeline</span>
 										<!-- <input type="text" name="egim_timeline" class="input-field block"> -->
-										<select name="egim_timeline" class="input-field block">
+										<!-- <select name="egim_timeline" class="input-field block"> -->
+										<select name="entry.933009677" class="input-field block">
 											<option value="blank" disabled="disabled" selected="selected">Select</option>
-											<option value="1-month">1 Month</option>
-											<option value="3-month">3 Month</option>
-											<option value="6-month">6 Month</option>
-											<option value="12-month">12 Month</option>
+											<option value="1 Month">1 Month</option>
+											<option value="3 Month">3 Month</option>
+											<option value="6 Month">6 Month</option>
+											<option value="12 Month">12 Month</option>
 										</select>
 									</label>
 								</div>
@@ -803,10 +810,10 @@
 										<span class="label form-label text-uppercase inline cursor-pointer space-min fill-blue">Timeline</span>
 										<select name="egbi_timeline" class="input-field block">
 											<option value="blank" disabled="disabled" selected="selected">Select</option>
-											<option value="1-month">1 Month</option>
-											<option value="3-month">3 Month</option>
-											<option value="6-month">6 Month</option>
-											<option value="12-month">12 Month</option>
+											<option value="1 Month">1 Month</option>
+											<option value="3 Month">3 Month</option>
+											<option value="6 Month">6 Month</option>
+											<option value="12 Month">12 Month</option>
 										</select>
 									</label>
 								</div>
@@ -1052,8 +1059,9 @@
 
 
 <script>
+	/* Form */
 	document.addEventListener("DOMContentLoaded", function() {
-	    var form = document.getElementById("testform");
+	    var form = document.getElementById("egImmigrationLeads");
 	    form.addEventListener("submit", function(event) {
 	        event.preventDefault(); // Prevent default form submission
 	        
@@ -1064,7 +1072,7 @@
 	        var urlEncodedData = new URLSearchParams(formData).toString();
 	        
 	        // Define endpoint URL
-	        var endpoint = "https://docs.google.com/forms/d/e/1FAIpQLSe0JWGbtcu-q-l4N8yaYg9GUjl56VEkvCFYlzFtYAZoUhgfxQ/formResponse";
+	        var endpoint = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScwVGA7s0ndpD6lX7rQNbFu0yQvPlEZrwwYYkqmebG2FJFR2g/formResponse";
 	        
 	        // Fetch API POST request
 	        fetch(endpoint, {
@@ -1078,19 +1086,19 @@
 	        })
 	        .then(response => {
 	            if (!response.success) {
-	                throw new Error("Network response was not ok");
+	                throw new Error("Network response was Unsuccessful");
 	            }
 	            return response.text();
 	        })
 	        .then(data => {
 	            // Handle success response
-	            console.log("Success:", data);
+	            console.log("success:", data);
 	            // You can handle the success response here
 	            // For example, display a success message to the user
 	        })
 	        .catch(error => {
 	            // Handle error
-	            console.error("Error:", error);
+	            console.error("error:", error);
 	            // Handle the error response here
 	            // For example, display an error message to the user
 	        });

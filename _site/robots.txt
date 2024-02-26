@@ -1,0 +1,34 @@
+User-agent: *
+Disallow: /tel:+919740711696
+Disallow: /https://wa.me/9740711696?text=I%27m%20interested%20in%20Immigration
+Disallow: /https://wa.me/8971683598?text=I%27m%20interested%20in%20Business%20Consultation
+Sitemap: https://ease.global/sitemap.xml
+
+# Google adsbot ignores robots.txt unless specifically named!
+User-agent: adsbot-google
+Disallow: /tel:+919740711696
+Disallow: /https://wa.me/9740711696?text=I%27m%20interested%20in%20Immigration
+Disallow: /https://wa.me/8971683598?text=I%27m%20interested%20in%20Business%20Consultation
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+Disallow: /tel:+919740711696
+Disallow: /https://wa.me/9740711696?text=I%27m%20interested%20in%20Immigration
+Disallow: /https://wa.me/8971683598?text=I%27m%20interested%20in%20Business%20Consultation
+Sitemap: https://fishandflow.com/sitemap.xml
+
+User-agent: AhrefsSiteAudit
+Crawl-delay: 10
+Disallow: /tel:+919740711696
+Disallow: /https://wa.me/9740711696?text=I%27m%20interested%20in%20Immigration
+Disallow: /https://wa.me/8971683598?text=I%27m%20interested%20in%20Business%20Consultation
+Sitemap: https://fishandflow.com/sitemap.xml
+
+User-agent: MJ12bot
+Crawl-Delay: 10
+
+User-agent: Pinterest
+Crawl-delay: 1
