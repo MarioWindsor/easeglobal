@@ -67,6 +67,78 @@
 
 <script type="text/javascript" src="/js/video_embed.js"></script>
 
+
+
+<script type="text/javascript">
+	/* -- Smooth Scolling -- */
+	document.addEventListener("DOMContentLoaded", makeLinksSmooth);
+	function makeLinksSmooth() { 
+		const navLinks = document.querySelectorAll("a.js_smooth"); 
+
+		navLinks.forEach((link) => {
+			link.addEventListener("click", smoothScroll);
+		});
+	}
+	function smoothScroll(e) {
+		e.preventDefault();
+		const targetId = this.getAttribute("href");
+		const targetElement = document.querySelector(targetId);
+
+		if (targetElement) { 
+			targetElement.scrollIntoView({ behavior: "smooth", block: "end" }); 
+		}
+	}
+</script>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	    var form = document.getElementById("testform");
+	    form.addEventListener("submit", function(event) {
+	        event.preventDefault(); // Prevent default form submission
+	        
+	        // Collect form data
+	        var formData = new FormData(form);
+	        
+	        // Convert formData to URL encoded string
+	        var urlEncodedData = new URLSearchParams(formData).toString();
+	        
+	        // Define endpoint URL
+	        var endpoint = "https://docs.google.com/forms/d/e/1FAIpQLSe0JWGbtcu-q-l4N8yaYg9GUjl56VEkvCFYlzFtYAZoUhgfxQ/formResponse";
+	        
+	        // Fetch API POST request
+	        fetch(endpoint, {
+	            method: "POST",
+	            mode: "cors",
+	            credentials: "include",
+	            headers: {
+	                "Content-Type": "application/x-www-form-urlencoded"
+	            },
+	            body: urlEncodedData
+	        })
+	        .then(response => {
+	            if (!response.success) {
+	                throw new Error("Network response was not ok");
+	            }
+	            return response.text();
+	        })
+	        .then(data => {
+	            // Handle success response
+	            console.log("Success:", data);
+	            // You can handle the success response here
+	            // For example, display a success message to the user
+	        })
+	        .catch(error => {
+	            // Handle error
+	            console.error("Error:", error);
+	            // Handle the error response here
+	            // For example, display an error message to the user
+	        });
+	    });
+	});
+
+</script>
+
 </body>
 
 </html>
