@@ -99,7 +99,7 @@
 	<!-- Typing JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
 	<!-- Smooth Scroll JS -->
-	<script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script> -->
 </head>
 
 <body class="body" id="body">
@@ -168,11 +168,20 @@
 				<div class="menu container space-min radius-25">
 					<div class="columns small-12 space-25 show-small-block hidden"><a href="tel:+919740711696" class="h3 block strong text-blue text-center cursor-pointer space-min">+91-97407-11696</a></div>
 					<input class="menu-check hidden" type="radio" name="menu" id="menu_im" checked="">
-					<a href="#immigration-intro" class="menu-button js_smooth columns small-4 space-min"><label for="menu_im" class="block cursor-pointer h6 strong fill-blue space-25-left-right space-25-top-bottom radius-25" for="imcalc_us" style="background-image: url('media/flag-us.png');">Immigrate Abroad</label></a>
+					<div class="menu-button columns small-4 space-min">
+						<label for="menu_im" class="js_menu block cursor-pointer h6 strong fill-blue space-25-left-right space-25-top-bottom radius-25" for="imcalc_us" style="background-image: url('media/flag-us.png');">Immigrate Abroad</label>
+						<a href="#immigration-intro" class="hidden"></a>
+					</div>
 					<input class="menu-check hidden" type="radio" name="menu" id="menu_bi">
-					<a href="#business-intro" class="menu-button js_smooth columns small-4 space-min"><label for="menu_bi" class="block cursor-pointer h6 strong fill-blue-dark space-25-left-right space-25-top-bottom radius-25" for="imcalc_us" style="background-image: url('media/flag-us.png');">Register Business</label></a>
+					<div class="menu-button columns small-4 space-min">
+						<label for="menu_bi" class="js_menu block cursor-pointer h6 strong fill-blue-dark space-25-left-right space-25-top-bottom radius-25" for="imcalc_us" style="background-image: url('media/flag-us.png');">Register Business</label>
+						<a href="#business-intro" class="hidden"></a>
+					</div>
 					<input class="menu-check hidden" type="radio" name="menu" id="menu_bc">
-					<a href="#consultation-intro" class="menu-button js_smooth columns small-4 space-min"><label for="menu_bc" class="block cursor-pointer h6 strong fill-yellow space-25-left-right space-25-top-bottom radius-25" for="imcalc_us" style="background-image: url('media/flag-us.png');">Business Services</label></a>
+					<div class="menu-button columns small-4 space-min">
+						<label for="menu_bc" class="js_menu block cursor-pointer h6 strong fill-yellow space-25-left-right space-25-top-bottom radius-25" for="imcalc_us" style="background-image: url('media/flag-us.png');">Business Services</label>
+						<a href="#consultation-intro" class="hidden"></a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -1046,24 +1055,48 @@
 
 <script type="text/javascript">
 	/* -- Smooth Scolling -- */
-	document.addEventListener("DOMContentLoaded", makeLinksSmooth);
-	function makeLinksSmooth() { 
-		const navLinks = document.querySelectorAll("a.js_smooth"); 
+	// document.addEventListener("DOMContentLoaded", makeLinksSmooth);
+	// function makeLinksSmooth() { 
+	// 	const navLinks = document.querySelectorAll("a.js_smooth"); 
+
+	// 	navLinks.forEach((link) => {
+	// 		link.addEventListener("click", smoothScroll);
+	// 	});
+	// }
+	// function smoothScroll(e) {
+	// 	e.preventDefault();
+	// 	const targetId = this.getAttribute("href");
+	// 	const targetElement = document.querySelector(targetId);
+
+	// 	if (targetElement) { 
+	// 		// targetElement.scrollIntoView({ behavior: "smooth", block: "end" }); 
+	// 		Jump(targetElement);
+	// 	}
+	// }
+
+	document.addEventListener("DOMContentLoaded", menuToggle);
+	function menuToggle(){
+		const navLinks = document.querySelectorAll(".js_menu"); 
 
 		navLinks.forEach((link) => {
-			link.addEventListener("click", smoothScroll);
+			link.addEventListener("click", function() {
+				var nextAnchor = link.nextElementSibling;
+				            
+				// Check if the next sibling is an anchor and trigger click
+				if (nextAnchor && nextAnchor.tagName === 'A') {
+					nextAnchor.click();
+				}
+			});
 		});
 	}
-	function smoothScroll(e) {
-		e.preventDefault();
-		const targetId = this.getAttribute("href");
-		const targetElement = document.querySelector(targetId);
 
-		if (targetElement) { 
-			// targetElement.scrollIntoView({ behavior: "smooth", block: "end" }); 
-			Jump(targetElement);
-		}
-	}
+
+	// function menuTrigger(trig){
+	// 	console.log("menu trigger");
+	// 	const nextElement = trig.nextElementSibling;
+	// 	console.log(nextElement);
+	// 	nextElement.click();
+	// }
 </script>
 
 

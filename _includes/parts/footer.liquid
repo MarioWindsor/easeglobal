@@ -71,24 +71,48 @@
 
 <script type="text/javascript">
 	/* -- Smooth Scolling -- */
-	document.addEventListener("DOMContentLoaded", makeLinksSmooth);
-	function makeLinksSmooth() { 
-		const navLinks = document.querySelectorAll("a.js_smooth"); 
+	// document.addEventListener("DOMContentLoaded", makeLinksSmooth);
+	// function makeLinksSmooth() { 
+	// 	const navLinks = document.querySelectorAll("a.js_smooth"); 
+
+	// 	navLinks.forEach((link) => {
+	// 		link.addEventListener("click", smoothScroll);
+	// 	});
+	// }
+	// function smoothScroll(e) {
+	// 	e.preventDefault();
+	// 	const targetId = this.getAttribute("href");
+	// 	const targetElement = document.querySelector(targetId);
+
+	// 	if (targetElement) { 
+	// 		// targetElement.scrollIntoView({ behavior: "smooth", block: "end" }); 
+	// 		Jump(targetElement);
+	// 	}
+	// }
+
+	document.addEventListener("DOMContentLoaded", menuToggle);
+	function menuToggle(){
+		const navLinks = document.querySelectorAll(".js_menu"); 
 
 		navLinks.forEach((link) => {
-			link.addEventListener("click", smoothScroll);
+			link.addEventListener("click", function() {
+				var nextAnchor = link.nextElementSibling;
+				            
+				// Check if the next sibling is an anchor and trigger click
+				if (nextAnchor && nextAnchor.tagName === 'A') {
+					nextAnchor.click();
+				}
+			});
 		});
 	}
-	function smoothScroll(e) {
-		e.preventDefault();
-		const targetId = this.getAttribute("href");
-		const targetElement = document.querySelector(targetId);
 
-		if (targetElement) { 
-			// targetElement.scrollIntoView({ behavior: "smooth", block: "end" }); 
-			Jump(targetElement);
-		}
-	}
+
+	// function menuTrigger(trig){
+	// 	console.log("menu trigger");
+	// 	const nextElement = trig.nextElementSibling;
+	// 	console.log(nextElement);
+	// 	nextElement.click();
+	// }
 </script>
 
 
