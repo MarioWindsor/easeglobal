@@ -194,12 +194,19 @@
 	            // For example, display a success message to the user
 	        })
 	        .catch(error => {
-	            // Handle error
+	        	if ( error instanceof TypeError ) {
+	        		// This error occurs due to CORS (which is a browser security feature),
+	        		// 	however Google has received the submission successfully
+	        		// Provide feedback to user
+	        		form.classList.add("thank-you");
+	        		return
+	        	}
+	        	// Legitimate error has occurred.
+	        	// Handle error and report back to user accordingly
 	            console.error("error:", error);
-	            // Handle the error response here
-	            // For example, display an error message to the user
+	        	// Form Fail
+	            form.classList.add("fail");
 	        });
-	        form.classList.add("thank-you");
 	    });
 	});
 </script>
@@ -243,12 +250,20 @@
 	            // For example, display a success message to the user
 	        })
 	        .catch(error => {
-	            // Handle error
+	        	if ( error instanceof TypeError ) {
+	        		// This error occurs due to CORS (which is a browser security feature),
+	        		// 	however Google has received the submission successfully
+	        		// Provide feedback to user
+	        		form.classList.add("thank-you");
+	        		return
+	        	}
+	        	// Legitimate error has occurred.
+	        	// Handle error and report back to user accordingly
 	            console.error("error:", error);
-	            // Handle the error response here
-	            // For example, display an error message to the user
+	        	// Form Fail
+	            form.classList.add("fail");
 	        });
-	        form.classList.add("thank-you");
+	        
 	    });
 	});
 </script>
