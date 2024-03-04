@@ -64,13 +64,13 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Terms and Conditions - EaseGlobal">
 	<meta property="og:description" content="Immigrate from India to abroad with EaseGlobal. We undertake immigration, global incorporation, and brand consulting. Our expert services ensure smooth immigration transitions, investment visas, employment visas, offering tailored solutions for individuals and businesses. Navigate visa processes, company formations, and brand strategies effortlessly. Trust us to unlock opportunities and facilitate your global journey with ease.">
-	<meta property="og:image" content="">
+	<meta property="og:image" content="https://ease.global/media/cover-easeglobal.png">
 	<meta property="og:site_name" content="">
 
 	<!-- Schema.org / Google+ -->
 	<meta itemprop="name" content="Terms and Conditions - EaseGlobal">
 	<meta itemprop="description" content="Immigrate from India to abroad with EaseGlobal. We undertake immigration, global incorporation, and brand consulting. Our expert services ensure smooth immigration transitions, investment visas, employment visas, offering tailored solutions for individuals and businesses. Navigate visa processes, company formations, and brand strategies effortlessly. Trust us to unlock opportunities and facilitate your global journey with ease.">
-	<meta itemprop="image" content="">
+	<meta itemprop="image" content="https://ease.global/media/cover-easeglobal.png">
 
 	<!-- Stylesheet -->
 	<!-- Base -->
@@ -100,6 +100,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
 	<!-- Smooth Scroll JS -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script> -->
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2S5Z4P7C3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-R2S5Z4P7C3');
+	</script>
+
 </head>
 
 <body class="body" id="body">
@@ -290,7 +302,7 @@
 
 
 		<!-- EG Footer -->
-		<section id="eg-footer" class="eg-footer fill-black space-200-top-bottom">
+		<section id="eg-footer" class="eg-footer fill-dark space-200-top-bottom">
 			<div class="container">
 				<div class="row">
 					<div class="description columns small-12 medium-6">
@@ -482,12 +494,19 @@
 	            // For example, display a success message to the user
 	        })
 	        .catch(error => {
-	            // Handle error
+	        	if ( error instanceof TypeError ) {
+	        		// This error occurs due to CORS (which is a browser security feature),
+	        		// 	however Google has received the submission successfully
+	        		// Provide feedback to user
+	        		form.classList.add("thank-you");
+	        		return
+	        	}
+	        	// Legitimate error has occurred.
+	        	// Handle error and report back to user accordingly
 	            console.error("error:", error);
-	            // Handle the error response here
-	            // For example, display an error message to the user
+	        	// Form Fail
+	            form.classList.add("fail");
 	        });
-	        form.classList.add("thank-you");
 	    });
 	});
 </script>
@@ -531,12 +550,20 @@
 	            // For example, display a success message to the user
 	        })
 	        .catch(error => {
-	            // Handle error
+	        	if ( error instanceof TypeError ) {
+	        		// This error occurs due to CORS (which is a browser security feature),
+	        		// 	however Google has received the submission successfully
+	        		// Provide feedback to user
+	        		form.classList.add("thank-you");
+	        		return
+	        	}
+	        	// Legitimate error has occurred.
+	        	// Handle error and report back to user accordingly
 	            console.error("error:", error);
-	            // Handle the error response here
-	            // For example, display an error message to the user
+	        	// Form Fail
+	            form.classList.add("fail");
 	        });
-	        form.classList.add("thank-you");
+	        
 	    });
 	});
 </script>
